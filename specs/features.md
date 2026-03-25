@@ -32,6 +32,7 @@ When a setting has "Random" enabled:
 - The resulting images are displayed in a grid with the varied setting value labeled under each image
 - This allows visual exploration of how that specific parameter affects output
 - The number of variants is fixed at **5** (not user-configurable)
+- **Only one setting can have Random enabled at a time** — enabling Random on a setting automatically disables it on any previously selected setting (radio-style behaviour)
 
 ## 5. Image Generation
 
