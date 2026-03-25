@@ -15,6 +15,9 @@ Two main sections accessible via top navigation:
 [Prompt Input — large textarea]
 [Negative Prompt — single global field, collapsible]
 
+[Aspect Ratio Selector — global]
+  ○ 1:1  ○ 16:9  ○ 4:3  ○ 3:2  ○ 9:16  ○ 2:3
+
 [Model Selection Bar]
   ☑ FLUX.2   ☑ Stable Diffusion 3.5   ☑ Qwen-Image   ☑ Illustrious/Noob
 
