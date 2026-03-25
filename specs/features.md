@@ -31,6 +31,13 @@
   - Valid range or options
   - A **"Random"** toggle button (see below)
 
+### Seed
+
+- Each model has a **seed field** — auto-populated with a random value on page load and before each new generation
+- The seed field is always editable — the user can type in a specific seed to reproduce a result
+- A 🎲 button next to the field re-randomises the seed manually
+- The seed used is always saved to the database with the generation record
+
 ## 5. Random Mode (Per Setting)
 
 When a setting has "Random" enabled:

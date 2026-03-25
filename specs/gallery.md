@@ -31,13 +31,16 @@ Each image in the gallery shows:
 Clicking an image opens a detail panel showing:
 - Full resolution image
 - Full prompt and negative prompt
-- All settings used
+- All settings used (including seed)
 - Model name and version
 - Generation time
 - Timestamp
 - Link to view the full run it belongs to
 - Download button
+- **"Reproduce" button** — navigates to the Generator page with all fields pre-filled exactly as they were at the time of generation: prompt, negative prompt, aspect ratio, model selection (only that model checked), and all model settings including the exact seed. The user can then click Generate to reproduce the image or tweak settings from that starting point.
 
 ## Run View
 
 Clicking a run shows all images generated in that run side by side — identical to the comparison view in the Generator page, but read-only and pulled from history.
+
+- Each image in the run view also has a **"Reproduce"** button for that individual image (same behaviour as in the detail view)
