@@ -27,11 +27,11 @@
 ## 4. Random Mode (Per Setting)
 
 When a setting has "Random" enabled:
-- Instead of using the specified value, the system generates **N images** with that setting varied across its valid range
+- Instead of using the specified value, the system generates **5 images** with that setting varied across its valid range
 - All other settings remain fixed
 - The resulting images are displayed in a grid with the varied setting value labeled under each image
 - This allows visual exploration of how that specific parameter affects output
-- N (number of random variants) should be configurable globally (default: TBD)
+- The number of variants is fixed at **5** (not user-configurable)
 
 ## 5. Image Generation
 
