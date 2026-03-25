@@ -55,6 +55,9 @@ When a setting has "Random" enabled:
 - Images are generated for each selected model (sequentially due to VRAM constraints)
 - Progress is shown per model (e.g., spinner, step counter if available)
 - Results appear as they complete — no need to wait for all models
+- **Generation queue** — if a generation is already running when the user clicks Generate, the new request is queued and starts automatically when the current one finishes
+- Queue depth is unlimited; a queue indicator shows how many runs are pending
+- Individual queued items can be cancelled before they start
 
 ## 7. Comparison View
 
