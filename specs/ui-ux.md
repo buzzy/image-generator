@@ -13,7 +13,7 @@ Two main sections accessible via top navigation:
 [Top Nav: Generator | Gallery]
 
 [Prompt Input — large textarea]
-[Negative Prompt — collapsible, shown per model or global TBD]
+[Negative Prompt — single global field, collapsible]
 
 [Model Selection Bar]
   ☑ FLUX.2   ☑ Stable Diffusion 3.5   ☑ Qwen-Image   ☑ Illustrious/Noob

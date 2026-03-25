@@ -3,8 +3,8 @@
 ## 1. Prompt Input
 
 - Large text area for the main (positive) prompt
-- Support for negative prompt where applicable per model
-- Prompt is shared across all selected models in a generation run
+- **One global negative prompt field** shared across all selected models — models that don't support negative prompts (e.g. FLUX.2) simply ignore it
+- Both prompts are shared across all selected models in a generation run
 
 ## 2. Model Selection
 
