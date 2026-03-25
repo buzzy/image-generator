@@ -33,6 +33,7 @@ When a setting has "Random" enabled:
 - This allows visual exploration of how that specific parameter affects output
 - The number of variants is fixed at **5** (not user-configurable)
 - **Only one setting can have Random enabled at a time** — enabling Random on a setting automatically disables it on any previously selected setting (radio-style behaviour)
+- The 5 values are **evenly spaced** across the setting's valid range (e.g., for Steps 1–100: values would be 10, 28, 46, 64, 82)
 
 ## 5. Image Generation
 
