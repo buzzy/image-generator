@@ -27,6 +27,15 @@ Each image in the gallery shows:
 - Search by prompt text
 - Filter by run (see all images from a specific run)
 
+## Multi-Select & Deletion
+
+- Each image card has a checkbox (visible on hover, or always visible in selection mode)
+- Selecting any image enters **selection mode** — a toolbar appears showing the count of selected items and a **Delete** button
+- "Select all" option to select all currently visible/filtered images
+- Deleting removes the image files from disk and their records from the database
+- A confirmation dialog is shown before deletion listing how many images will be deleted
+- Deletion is permanent and cannot be undone
+
 ## Detail View
 
 Clicking an image opens a detail panel showing:
