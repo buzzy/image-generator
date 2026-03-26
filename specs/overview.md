@@ -26,4 +26,21 @@ Single local user (the developer/owner). No authentication required. Runs entire
 - **Backend:** Bun (pure, no Node.js)
 - **Frontend:** Vue
 - **Database:** SQLite (via Bun's native SQLite support)
+- **Real-time communication:** WebSocket — used for generation progress events, completion, errors, and queue management (e.g. cancel a queued job)
 - **Scope:** Local only — no deployment, no authentication, no cloud services
+
+## WebSocket Event Protocol
+
+The backend exposes a WebSocket endpoint used for all real-time communication. Key event types:
+
+| Direction | Event | Payload |
+|-----------|-------|---------|
+| client → server | `generate` | run config (prompt, models, settings) |
+| client → server | `cancel` | run ID or queue item ID |
+| server → client | `run:queued` | run ID, queue position |
+| server → client | `run:started` | run ID |
+| server → client | `model:started` | run ID, model ID |
+| server → client | `model:progress` | run ID, model ID, step, total steps |
+| server → client | `model:complete` | run ID, model ID, image path |
+| server → client | `model:error` | run ID, model ID, error message |
+| server → client | `run:complete` | run ID |
