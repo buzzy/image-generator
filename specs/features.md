@@ -59,12 +59,15 @@ When a setting has "Random" enabled:
 - Queue depth is unlimited; a queue indicator shows how many runs are pending
 - Individual queued items can be cancelled before they start
 
-## 7. Comparison View
+## 7. Comparison View & Results List
 
-- All generated images from a single run are displayed side by side
-- Each image is labeled with: model name, key settings used
+- The Generator page maintains a running list of all results from the current session — new runs are added to the top, older runs remain visible below
+- As soon as a generation run starts, placeholder cards are immediately inserted at the top of the results list — one per model — in a **loading state**: blurred fake image with a spinner/loader overlay
+- Once a model finishes, its placeholder is replaced by the real image in place (no layout shift)
+- Each image card shows: model name, key settings summary, generation time (once complete)
 - Images can be clicked to view full resolution
-- Option to download individual images
+- Download button per image
+- The session list is not persisted — refreshing the page clears it (full history is always in the Gallery)
 
 ## 8. Generation History & Persistence
 

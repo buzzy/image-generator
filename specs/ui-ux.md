@@ -43,10 +43,13 @@ Two main sections accessible via top navigation:
 
 ## Results Display
 
-- Images appear as they are generated (streaming results, not waiting for all)
-- Each image card shows: model name, generation time, key settings summary
+- New runs are prepended to the top of the results area as they are triggered
+- Each model's card appears immediately in a **loading state**: blurred placeholder image + spinner overlay
+- Cards resolve to the real image in-place as each model completes (no layout shift)
+- Completed image cards show: model name, generation time, key settings summary
 - Click image → full resolution lightbox
 - Download button per image
+- Older runs remain visible below, scrollable within the session
 
 ## Feedback & State
 
