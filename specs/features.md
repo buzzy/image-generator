@@ -59,6 +59,14 @@ When a setting has "Random" enabled:
 - Queue depth is unlimited; a queue indicator shows how many runs are pending
 - Individual queued items can be cancelled before they start
 
+### Error Handling
+
+- If a model fails mid-generation (VRAM overflow, crash, timeout), its card shows an error message in place of the image
+- Other models in the same run are unaffected and continue generating
+- The failed card displays a **"Retry"** button — clicking it re-triggers just that model without starting a full new run
+- Failed generations are saved to the database with an error status
+- If the retry also fails, the error card updates with the new error message and the Retry button remains available
+
 ## 7. Comparison View & Results List
 
 - The Generator page maintains a running list of all results from the current session — new runs are added to the top, older runs remain visible below
