@@ -31,10 +31,21 @@ Each model plugin must expose:
 - **Metadata:** Name, description, homepage/source link
 - **Settings schema:** List of all configurable parameters with name, type, default value, valid range/options, and human-readable explanation
 - **Generate function:** Accepts prompt + settings, returns image(s)
-- **Health check:** Reports whether the model is loaded and ready
+- **Health check:** Reports whether the model is loaded and ready, and if not, why (e.g. "weights not found at path X", "service offline", "insufficient VRAM")
+
+## Availability & Status
+
+- All registered model plugins are always shown in the model selection bar
+- Unavailable models are **greyed out and non-selectable**, with a tooltip explaining the specific reason they are unavailable
+- Possible unavailability reasons surfaced to the user:
+  - Model weights not downloaded / not found at expected path
+  - Required external service not running
+  - Insufficient VRAM for this model
+  - Model failed to load (with error detail)
+- When a model becomes available (e.g. weights downloaded, service started), it becomes selectable without requiring a page reload
 
 ## VRAM Management
 
 - Models are loaded on-demand to avoid exceeding 24GB VRAM
 - Only one model should be loaded at a time unless VRAM allows multiple
-- Loading state should be surfaced in the UI
+- Loading state is surfaced in the UI per model card
