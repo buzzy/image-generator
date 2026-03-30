@@ -22,20 +22,29 @@
 
 ## 4. Model Settings
 
-- Each model exposes its own set of configurable parameters (excluding dimensions, which are global)
-- Settings are grouped per model and collapsible
-- Each setting displays:
+Settings use a **shared-with-override** model:
+
+- Settings that exist across multiple models (e.g. steps, CFG scale) have a **shared global value** shown in a "Shared Settings" panel above the per-model panels
+- Each model's collapsible panel shows its own settings; shared settings appear with the current global value but can be **overridden per model**
+- When a model is using an override, a visual indicator (e.g. a small dot or "custom" badge) marks that setting as overridden
+- An override can be cleared to revert to the global shared value
+- Settings unique to a specific model (not shared) appear only in that model's panel
+- Changing a shared setting updates all models that are not individually overriding it
+
+Each setting displays:
   - Name
-  - Current value (editable input)
+  - Current value (editable input — shared or overridden)
   - Human-readable explanation of what the setting does
   - Valid range or options
-  - A **"Random"** toggle button (see below)
+  - A **"Random"** toggle button (see Random Mode section)
+  - Override indicator where applicable
 
 ### Seed
 
-- Each model has a **seed field** — auto-populated with a random value on page load and before each new generation
-- The seed field is always editable — the user can type in a specific seed to reproduce a result
-- A 🎲 button next to the field re-randomises the seed manually
+- Each model has its own **seed field** (seeds are not shared, since identical seeds across different architectures produce different images anyway)
+- Auto-populated with a random value before each generation
+- Always editable — the user can type in a specific seed
+- A 🎲 button re-randomises the seed
 - The seed used is always saved to the database with the generation record
 
 ## 5. Random Mode (Per Setting)
