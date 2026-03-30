@@ -44,6 +44,14 @@ Each model plugin must expose:
   - Model failed to load (with error detail)
 - When a model becomes available (e.g. weights downloaded, service started), it becomes selectable without requiring a page reload
 
+## Output Format
+
+- Each model saves images in its **native output format** — no conversion is applied
+- The model plugin declares its output format in its metadata (e.g. `"outputFormat": "png"`)
+- The format is stored in the database alongside each generation record
+- The gallery and lightbox handle all formats transparently
+- Download preserves the original format
+
 ## VRAM Management
 
 - Models are loaded on-demand to avoid exceeding 24GB VRAM
